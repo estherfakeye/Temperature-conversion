@@ -1,11 +1,11 @@
 const textbox = document.getElementById("textbox");
-const toFarenheit = document.getElementById("toFarenheit");
+const toFahrenheit = document.getElementById("toFahrenheit");
 const toCelsius = document.getElementById("toCelsius");
 const result = document.getElementById("result");
 let temp;
 
 function convert() {
-    if (toFarenheit.checked) {
+    if (toFahrenheit.checked) {
         temp =Number(textbox.value);
         temp = temp * 9 / 5 + 32;
         result.textContent = temp.toFixed(1) + "°f";
@@ -16,6 +16,6 @@ function convert() {
         result.textContent = temp.toFixed(1) + "°c";
     }
     else{
-        result.textContent = "select a unit"
+        result.textContent = "Please select a unit."
     }
 }

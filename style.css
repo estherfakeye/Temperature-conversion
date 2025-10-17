@@ -1,45 +1,105 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: hsl(0, 3%, 91%);
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-h1 {
-    color: hsl(240, 73%, 51%);
-}
+
 form {
-    background-color: hsl(0, 0%, 100%);
-    text-align: center;
-    max-width: 350px;
-    margin: auto;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 5px 9px 15px hsl(0, 0%, 21%);
+  background-color: #fff;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
 }
+
+form:hover {
+  transform: translateY(-5px);
+}
+
+h1 {
+  color: #3b82f6;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
 #textbox {
-    width: 50%;
-    text-align: center;
-    font-size: 2em;
-    border: 2px solid hsl(0, 0%, 0.8%);
-    border-radius: 4px;
-    margin-bottom: 15px;
+  width: 80%;
+  text-align: center;
+  font-size: 1.8rem;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
 }
-label{
-    font-size: 1.5em;
-    font-weight: bold;
+
+#textbox:focus {
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
 }
+
+.radio-group {
+  text-align: left;
+  margin: 10px auto 20px;
+  display: inline-block;
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
 button {
-    margin-top: 15px;
-    background-color: hsl(0, 100%, 60%);
-    font-size: 1.5em;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
+  background-color: #ef4444;
+  font-size: 1.2rem;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-button:hover{
-    background-color: hsl(0, 100%, 50%);
+
+button:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
 }
-#result{
-    font-size: 1.75em;
-    font-weight: bold;
+
+button:active {
+  transform: scale(0.98);
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #111827;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #textbox {
+    font-size: 1.4rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .radio-group {
+    font-size: 1rem;
+  }
 }
